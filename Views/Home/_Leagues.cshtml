@@ -1,0 +1,33 @@
+@model League
+<div class="container-fluid" style="margin: 10px;">
+  <h3>all womens' leagues</h3>
+  @foreach (League league in ViewBag.WomensLeagues)
+  {
+    <li>@league.Name</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>all leagues where sport is any type of hockey</h3>
+  @foreach (League league in ViewBag.HockeyLeagues)
+  {
+    <li>@league.Name</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>all leagues where sport is something OTHER THAN football</h3>
+  @foreach (League league in ViewBag.NotFootballLeagues)
+  {
+    <li>@league.Name</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>all leagues that call themselves "conferences"</h3>
+  @foreach (League league in ViewBag.ConferenceLeagues)
+  {
+    <li>@league.Name</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>all leagues in the Atlantic region</h3>
+  @foreach (League league in ViewBag.AtlanticLeagues)
+  {
+    <li>@league.Name</li>
+  }
+  <div class="h-1 border-top"></div>
+</div>

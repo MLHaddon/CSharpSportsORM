@@ -1,0 +1,26 @@
+@model Player
+<div class="container-fluid">
+  <h3>every player with last name "Cooper"</h3>
+  @foreach (Player player in ViewBag.PlayersLastNameCooper)
+  {
+    <li>@player.FirstName @player.LastName</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>every player with first name "Joshua"</h3>
+  @foreach (Player player in ViewBag.PlayersFirstNameJoshua)
+  {
+    <li>@player.FirstName @player.LastName</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</h3>
+  @foreach (Player player in ViewBag.PlayersLastCooperNOTFirstJoshua)
+  {
+    <li>@player.FirstName @player.LastName</li>
+  }
+  <div class="h-1 border-top"></div>
+  <h3>all players with first name "Alexander" OR first name "Wyatt"</h3>
+  @foreach (Player player in ViewBag.PlayersFirstNameAlexanderORWyatt)
+  {
+    <li>@player.FirstName @player.LastName</li>
+  }
+</div>
